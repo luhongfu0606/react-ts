@@ -8,10 +8,10 @@ const {createProxyMiddleware} = require("http-proxy-middleware");
 
 module.exports = function (app:any) {
     app.use(
-        createProxyMiddleware("/api",{ 
-			target:'http://localhost:8000', //请求转发给谁
-			changeOrigin:true,
-			pathRewrite:{'^/api':''} 
+        createProxyMiddleware('/api',{
+			target:'http://localhost:8000', //目标地址
+			changeOrigin: true,
+			pathRewrite:{'^/api':''}
 		})
 	)
 };

@@ -3,8 +3,8 @@ import { getGasPrice } from "../../api";
 export default function NftRanking() {
     // const [gasPrice, usegasPrice] = useState()
 
-    const func_getGasPrice = () => {
-        getGasPrice().then(
+    const func_getGasPrice = async() => {
+        await getGasPrice().then(
             response => {
                 console.log('成功了', response.data) },
                error => {
